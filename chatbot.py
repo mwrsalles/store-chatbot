@@ -108,7 +108,8 @@ class Cart: #this class is related to the shopping cart
             total = 0
             for tuple_p_and_q in self.shopping_list:
                 total += tuple_p_and_q[0].price*tuple_p_and_q[1]
-            print("The final cost of your purchase is US", "{0:4.2f}".format(total), ".            \nThank you for shopping with us.")
+            print("The final cost of your purchase is US", "{0:4.2f}".format(total), ".\
+            \nThank you for shopping with us.")
                                   
                 
 class ChatBot: #this class is related to the Bot, it takes users' answers
@@ -117,14 +118,16 @@ class ChatBot: #this class is related to the Bot, it takes users' answers
     def opening_cart(self, cart, stock):
         ChatBot.__open_cart = True 
         while ChatBot.__open_cart:
-            print("\n1- add products to your shopping cart\n2- remove products from your shopping cart            \n3- see what you have in your shopping cart\n4- close your shopping cart")
+            print("\n1- add products to your shopping cart\n2- remove products from your shopping cart\
+            \n3- see what you have in your shopping cart\n4- close your shopping cart")
             clients_choice = str(input("\nPlease, type the number corresponding to your choice: "))
             if clients_choice == "1" or clients_choice == "2" or clients_choice == "3" or clients_choice == "4":
                 clients_choice = int(clients_choice)
                 print("\n=====================================================")
             else:
                 while clients_choice not in ["1", "2", "3", "4"]:
-                    clients_choice = str(input("\nInvalid value! Please, type the number corresponding to your choice: "))
+                    clients_choice = str(input("\nInvalid value!\ 
+                    Please, type the number corresponding to your choice: "))
                 clients_choice = int(clients_choice)
                 print("\n=====================================================")
             
