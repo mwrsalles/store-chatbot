@@ -3,14 +3,16 @@
 
 # In[ ]:
 
-
-class Product: #this class is related to each product from the store, it includes the product's name and its price
+#this class is related to each product from the store, it includes the product's name and its price:
+class Product: 
     def __init__(self, name, price):
         self.name = name
         self.price = price
-        
+    
+    
 
-class Stock: #this class is related to the Stock
+#this class is related to the Stock:
+class Stock: 
     #it saves the products added for the store and makes changes according to users' choices
     def __init__(self):
         self.quantity = []
@@ -35,7 +37,8 @@ class Stock: #this class is related to the Stock
 
             
             
-class Cart: #this class is related to the shopping cart
+#this class is related to the shopping cart:            
+class Cart: 
     #it includes a list if users's products, adds and removes products to the list, show what the user has on their list etc
     def __init__(self):
         self.shopping_list = []
@@ -110,9 +113,11 @@ class Cart: #this class is related to the shopping cart
                 total += tuple_p_and_q[0].price*tuple_p_and_q[1]
             print("The final cost of your purchase is US", "{0:4.2f}".format(total), ".\
             \nThank you for shopping with us.")
-                                  
-                
-class ChatBot: #this class is related to the Bot, it takes users' answers
+      
+    
+    
+#this class is related to the Bot, it takes users' answers                
+class ChatBot: 
     __open_cart = True
     __start_message = print("Welcome to our store!\nHere is a set list of what you can do:")
     def opening_cart(self, cart, stock):
@@ -184,7 +189,6 @@ class ChatBot: #this class is related to the Bot, it takes users' answers
                 cart.FinalValue(stock)
                 ChatBot.__open_cart = False
                 
-
                           
     def ClientChoice(self,stock): #related to choices 1 and 2, takes the product and the quantity wanted by the user
         clients_product = input('Type the product you want to add or remove: ')
@@ -236,4 +240,3 @@ testing_cart = Cart()
 testing_bot = ChatBot()
 
 testing_bot.opening_cart(testing_cart, stock_test)
-
