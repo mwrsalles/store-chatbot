@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
 
 #this class is related to each product from the store, it includes the product's name and its price:
 class Product: 
